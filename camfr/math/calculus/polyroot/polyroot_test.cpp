@@ -13,7 +13,10 @@
 #include <iostream>
 #include <iomanip>
 #include "polyroot.h"
-
+#include "vector"
+using std::cout;
+using std::endl;
+using std::vector;
 /////////////////////////////////////////////////////////////////////////////
 //
 // Main driver
@@ -22,7 +25,7 @@
 
 int main()
 {
-  cout << setprecision(15);
+  cout << std::setprecision(15);
 
   // Polynomial with roots 1..10.
     

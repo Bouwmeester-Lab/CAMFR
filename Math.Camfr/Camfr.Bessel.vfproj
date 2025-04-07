@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VisualStudioProject ProjectType="typeStaticLibrary" ProjectCreator="Intel Fortran" Keyword="Static Library" Version="11.0" ProjectIdGuid="{AAF3D360-0C6D-4094-A747-0BD43C635F55}">
+	<Platforms>
+		<Platform Name="Win32"/>
+		<Platform Name="x64"/>
+	</Platforms>
+	<Configurations>
+		<Configuration Name="Debug|Win32" UseCompiler="ifortCompiler" ConfigurationType="typeStaticLibrary">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+			<Tool Name="VFLibrarianTool"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Debug|x64" UseCompiler="ifxCompiler" ConfigurationType="typeStaticLibrary">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" DebugInformationFormat="debugEnabled" Optimization="optimizeDisabled" WarnInterfaces="true" Traceback="true" BoundsCheck="true" StackFrameCheck="true" RuntimeLibrary="rtMultiThreadedDebugDLL"/>
+			<Tool Name="VFLibrarianTool"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|Win32" UseCompiler="ifortCompiler" ConfigurationType="typeStaticLibrary">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" RuntimeLibrary="rtMultiThreadedDLL"/>
+			<Tool Name="VFLibrarianTool"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+		</Configuration>
+		<Configuration Name="Release|x64" UseCompiler="ifxCompiler" ConfigurationType="typeStaticLibrary">
+			<Tool Name="VFFortranCompilerTool" SuppressStartupBanner="true" FloatingPointModel="precise" RuntimeLibrary="rtMultiThreadedDLL"/>
+			<Tool Name="VFLibrarianTool"/>
+			<Tool Name="VFResourceCompilerTool"/>
+			<Tool Name="VFMidlTool" SuppressStartupBanner="true" TargetEnvironment="midlTargetAMD64"/>
+			<Tool Name="VFCustomBuildTool"/>
+			<Tool Name="VFPreLinkEventTool"/>
+			<Tool Name="VFPreBuildEventTool"/>
+			<Tool Name="VFPostBuildEventTool"/>
+		</Configuration>
+	</Configurations>
+	<Files>
+		<Filter Name="Header Files" Filter="fi;fd"/>
+		<Filter Name="Resource Files" Filter="rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe"/>
+		<Filter Name="Source Files" Filter="f90;for;f;fpp;ftn;def;odl;idl">
+			<File RelativePath="..\camfr\math\bessel\slatec\d1mach.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\d9b0mp.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\d9b1mp.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\d9lgmc.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dasyjy.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dbesj.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dbesj0.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dbesj1.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dbesy.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dbesy0.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dbesy1.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dbsynu.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dcsevl.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dgamlm.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dgamln.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dgamma.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\djairy.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dlngam.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\dyairy.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\fdump.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\i1mach.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\initds.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\j4save.f">
+			</File>
+			<File RelativePath="..\camfr\math\calculus\polyroot\jenkins_traub.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\limits.c"/>
+			<File RelativePath="..\camfr\math\bessel\slatec\machar.c"/>
+			<File RelativePath="..\camfr\math\bessel\slatec\print_d1mach.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\xercnt.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\xerhlt.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\xermsg.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\xerprn.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\xersve.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\xgetua.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zabs.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zacai.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zacon.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zairy.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zasyi.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zbesh.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zbesj.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zbesy.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zbinu.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zbknu.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zbuni.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zbunk.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zdiv.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zexp.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zkscl.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zlog.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zmlri.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zmlt.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zrati.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zs1s2.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zseri.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zshch.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zsqrt.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zuchk.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zunhj.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zuni1.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zuni2.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zunik.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zunk1.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zunk2.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zuoik.f">
+			</File>
+			<File RelativePath="..\camfr\math\bessel\slatec\zwrsk.f">
+			</File>
+		</Filter>
+	</Files>
+	<Globals/>
+</VisualStudioProject>

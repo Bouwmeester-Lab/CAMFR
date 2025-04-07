@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{D17684B2-C895-44E7-9540-AA8967A2720F}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\local\boost_1_87_0\boost\python;$(IncludePath);C:\Users\emore\anaconda3\include;C:\Users\emore\anaconda3\Lib\site-packages\numpy\core\include\numpy</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\local\boost_1_87_0\boost\python;$(IncludePath);C:\Users\emore\anaconda3\include;C:\Users\emore\anaconda3\Lib\site-packages\numpy\core\include\numpy</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions);DP;</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <UndefinePreprocessorDefinitions>SP</UndefinePreprocessorDefinitions>
+      <UndefineAllPreprocessorDefinitions>false</UndefineAllPreprocessorDefinitions>
+      <AdditionalOptions>-DDP
+ %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions);FORTRAN_SYMBOLS_WITHOUT_TRAILING_UNDERSCORES;</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <UndefinePreprocessorDefinitions>
+      </UndefinePreprocessorDefinitions>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\emore\anaconda3\libs;C:\Program Files\AMD\AOCL-Windows\amd-libm\lib;C:\Program Files (x86)\Intel\oneAPI\compiler\2025.1\lib;D:\repos\CAMFR\Math.Camfr\x64\Release;C:\vcpkg\packages\blitz_x64-windows\lib;C:\Program Files\AMD\AOCL-Windows\amd-scalapack\lib\LP64\static;C:\Program Files\AMD\AOCL-Windows\amd-libflame\lib\LP64;C:\Program Files\AMD\AOCL-Windows\amd-blis\lib\LP64</AdditionalLibraryDirectories>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies);python312.lib;libalm-static.lib;libm.lib;Camfr.Bessel.lib;blitz.lib;scalapack.lib;AOCL-LibFlame-Win-MT-dll.lib;AOCL-LibFlame-Win-dll.lib;AOCL-LibBlis-Win.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="bloch.cpp" />
+    <ClCompile Include="CAMFR.cpp" />
+    <ClCompile Include="camfr_wrap.cpp" />
+    <ClCompile Include="camfr_wrap_2.cpp" />
+    <ClCompile Include="cavity.cpp" />
+    <ClCompile Include="chunk.cpp" />
+    <ClCompile Include="coord.cpp" />
+    <ClCompile Include="defs.cpp" />
+    <ClCompile Include="expression.cpp" />
+    <ClCompile Include="field.cpp" />
+    <ClCompile Include="icache.cpp" />
+    <ClCompile Include="infstack.cpp" />
+    <ClCompile Include="interface.cpp" />
+    <ClCompile Include="material.cpp" />
+    <ClCompile Include="math\bessel\bessel.cpp" />
+    <ClCompile Include="math\bessel\slatec\limits.c" />
+    <ClCompile Include="math\bessel\slatec\machar.c" />
+    <ClCompile Include="math\calculus\croot\allroots.cpp" />
+    <ClCompile Include="math\calculus\croot\contour.cpp" />
+    <ClCompile Include="math\calculus\croot\mueller.cpp" />
+    <ClCompile Include="math\calculus\croot\patterson_coeff.cpp" />
+    <ClCompile Include="math\calculus\croot\patterson_z_n.cpp" />
+    <ClCompile Include="math\calculus\fourier\fourier.cpp" />
+    <ClCompile Include="math\calculus\minimum\minimum.cpp" />
+    <ClCompile Include="math\calculus\polyroot\polyroot.cpp" />
+    <ClCompile Include="math\calculus\quadrature\patterson.cpp" />
+    <ClCompile Include="math\calculus\quadrature\patterson_coeff.cpp" />
+    <ClCompile Include="math\calculus\quadrature\patterson_quad.cpp" />
+    <ClCompile Include="math\calculus\root\root.cpp" />
+    <ClCompile Include="math\calculus\traceroot\traceroot.cpp" />
+    <ClCompile Include="math\linalg\linalg.cpp" />
+    <ClCompile Include="mode.cpp" />
+    <ClCompile Include="primitives\blochsection\blochsection.cpp" />
+    <ClCompile Include="primitives\blochsection\blochsectionmode.cpp" />
+    <ClCompile Include="primitives\blochsection\blochsectionoverlap.cpp" />
+    <ClCompile Include="primitives\circ\circ.cpp" />
+    <ClCompile Include="primitives\circ\circdisp.cpp" />
+    <ClCompile Include="primitives\circ\circmode.cpp" />
+    <ClCompile Include="primitives\circ\circoverlap.cpp" />
+    <ClCompile Include="primitives\circ\circ_M_util.cpp" />
+    <ClCompile Include="primitives\planar\planar.cpp" />
+    <ClCompile Include="primitives\section\refsection.cpp" />
+    <ClCompile Include="primitives\section\section.cpp" />
+    <ClCompile Include="primitives\section\sectiondisp.cpp" />
+    <ClCompile Include="primitives\section\sectionmode.cpp" />
+    <ClCompile Include="primitives\section\sectionoverlap.cpp" />
+    <ClCompile Include="primitives\slab\generalslab.cpp" />
+    <ClCompile Include="primitives\slab\isoslab\slab.cpp" />
+    <ClCompile Include="primitives\slab\isoslab\slabdisp.cpp" />
+    <ClCompile Include="primitives\slab\isoslab\slabmode.cpp" />
+    <ClCompile Include="primitives\slab\isoslab\slaboverlap.cpp" />
+    <ClCompile Include="primitives\slab\isoslab\slabwall.cpp" />
+    <ClCompile Include="primitives\slab\slabmatrixcache.cpp" />
+    <ClCompile Include="scatterer.cpp" />
+    <ClCompile Include="stack.cpp" />
+    <ClCompile Include="S_scheme.cpp" />
+    <ClCompile Include="S_scheme_fields.cpp" />
+    <ClCompile Include="T_scheme.cpp" />
+    <ClCompile Include="T_scheme_fields.cpp" />
+    <ClCompile Include="util\cvector.cpp" />
+    <ClCompile Include="util\index.cpp" />
+    <ClCompile Include="util\tracesorter.cpp" />
+    <ClCompile Include="waveguide.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bloch.h" />
+    <ClInclude Include="camfr_wrap.h" />
+    <ClInclude Include="cavity.h" />
+    <ClInclude Include="chunk.h" />
+    <ClInclude Include="coord.h" />
+    <ClInclude Include="defs.h" />
+    <ClInclude Include="expression.h" />
+    <ClInclude Include="field.h" />
+    <ClInclude Include="icache.h" />
+    <ClInclude Include="infstack.h" />
+    <ClInclude Include="interface.h" />
+    <ClInclude Include="material.h" />
+    <ClInclude Include="math\bessel\bessel.h" />
+    <ClInclude Include="math\calculus\calculus.h" />
+    <ClInclude Include="math\calculus\croot\allroots.h" />
+    <ClInclude Include="math\calculus\croot\contour.h" />
+    <ClInclude Include="math\calculus\croot\mueller.h" />
+    <ClInclude Include="math\calculus\croot\patterson_z_n.h" />
+    <ClInclude Include="math\calculus\fourier\fourier.h" />
+    <ClInclude Include="math\calculus\function.h" />
+    <ClInclude Include="math\calculus\minimum\minimum.h" />
+    <ClInclude Include="math\calculus\polyroot\polyroot.h" />
+    <ClInclude Include="math\calculus\quadrature\patterson.h" />
+    <ClInclude Include="math\calculus\quadrature\patterson_quad.h" />
+    <ClInclude Include="math\calculus\root\root.h" />
+    <ClInclude Include="math\calculus\traceroot\traceroot.h" />
+    <ClInclude Include="math\linalg\linalg.h" />
+    <ClInclude Include="mode.h" />
+    <ClInclude Include="primitives\blochsection\blochsection.h" />
+    <ClInclude Include="primitives\blochsection\blochsectionmode.h" />
+    <ClInclude Include="primitives\blochsection\blochsectionoverlap.h" />
+    <ClInclude Include="primitives\circ\circ.h" />
+    <ClInclude Include="primitives\circ\circdisp.h" />
+    <ClInclude Include="primitives\circ\circmode.h" />
+    <ClInclude Include="primitives\circ\circoverlap.h" />
+    <ClInclude Include="primitives\circ\circ_M_util.h" />
+    <ClInclude Include="primitives\planar\planar.h" />
+    <ClInclude Include="primitives\section\refsection.h" />
+    <ClInclude Include="primitives\section\section.h" />
+    <ClInclude Include="primitives\section\sectiondisp.h" />
+    <ClInclude Include="primitives\section\sectionmode.h" />
+    <ClInclude Include="primitives\section\sectionoverlap.h" />
+    <ClInclude Include="primitives\slab\generalslab.h" />
+    <ClInclude Include="primitives\slab\isoslab\slab.h" />
+    <ClInclude Include="primitives\slab\isoslab\slabdisp.h" />
+    <ClInclude Include="primitives\slab\isoslab\slabmode.h" />
+    <ClInclude Include="primitives\slab\isoslab\slaboverlap.h" />
+    <ClInclude Include="primitives\slab\isoslab\slabwall.h" />
+    <ClInclude Include="primitives\slab\slabmatrixcache.h" />
+    <ClInclude Include="scatterer.h" />
+    <ClInclude Include="stack.h" />
+    <ClInclude Include="S_scheme.h" />
+    <ClInclude Include="S_scheme_fields.h" />
+    <ClInclude Include="T_scheme.h" />
+    <ClInclude Include="T_scheme_fields.h" />
+    <ClInclude Include="util\cvector.h" />
+    <ClInclude Include="util\index.h" />
+    <ClInclude Include="util\storage.h" />
+    <ClInclude Include="util\tracesorter.h" />
+    <ClInclude Include="util\vectorutil.h" />
+    <ClInclude Include="waveguide.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

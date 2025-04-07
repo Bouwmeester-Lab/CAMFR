@@ -236,7 +236,7 @@ cMatrix multiply(const cMatrix& A, const cMatrix& B, Op a, Op b)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(zgesv)
+extern "C" void F77NAME(ZGESV)
   (const int&,const int&,const Complex*,const int&,const int*,
    const Complex*,const int&,int&);
 
@@ -275,7 +275,7 @@ cMatrix solve(const cMatrix& A, const cMatrix& B)
   
   int info;
   
-  F77NAME(zgesv)(A_rows,B_cols,A_LU.data(),A_rows,
+  F77NAME(ZGESV)(A_rows,B_cols,A_LU.data(),A_rows,
                  P.data(),B_X.data(),B_rows,info);
 
   if (info < 0)
@@ -304,7 +304,7 @@ cMatrix solve(const cMatrix& A, const cMatrix& B)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(zgesvx)
+extern "C" void F77NAME(ZGESVX)
   (const char*,const char*,const int&,const int&,const Complex*,const int&,
    const Complex*,const int&,const int*,const char*,const Real*,const Real*,
    const Complex*,const int&,const Complex*,const int&,Real&,const Real*,
@@ -360,7 +360,7 @@ cMatrix solve_x(const cMatrix& A, const cMatrix& B)
   
   int info;
 
-  F77NAME(zgesvx)("E","N",A_rows,B_cols,A_bis.data(),A_rows,AF.data(),A_rows,
+  F77NAME(ZGESVX)("E","N",A_rows,B_cols,A_bis.data(),A_rows,AF.data(),A_rows,
                   P.data(),equi,R.data(),C.data(),B_bis.data(),B_rows,
                   X.data(),B_rows,cond,ferr.data(),berr.data(),work.data(),
                   work2.data(),info);
@@ -438,7 +438,7 @@ cMatrix solve_svd(const cMatrix& A, const cMatrix& B)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(zsysv)
+extern "C" void F77NAME(ZSYSV)
   (const char*,const int&,const int&,const Complex*,const int&,const int*,
    const Complex*,const int&,const Complex*,const int&,const int&);
 
@@ -479,7 +479,7 @@ cMatrix solve_sym(const cMatrix& A, const cMatrix& B)
   
   int info;
   
-  F77NAME(zsysv)("U",A_rows,B_cols,A_LU.data(),A_rows,P.data(),B_X.data(),
+  F77NAME(ZSYSV)("U",A_rows,B_cols,A_LU.data(),A_rows,P.data(),B_X.data(),
                  B_rows,work.data(),2*A_rows,info);
 
   if (info < 0)
@@ -508,7 +508,7 @@ cMatrix solve_sym(const cMatrix& A, const cMatrix& B)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(zsysvx)
+extern "C" void F77NAME(ZSYSVX)
   (const char*,const char*,const int&,const int&,const Complex*,const int&,
    const Complex*,const int&,const int*,const Complex*,const int&,
    const Complex*,const int&,Real&,const Real*,const Real*,const Complex*,
@@ -561,7 +561,7 @@ cMatrix solve_sym_x(const cMatrix& A, const cMatrix& B)
   
   int info;
 
-  F77NAME(zsysvx)("N","U",A_rows,B_cols,A_bis.data(),A_rows,AF.data(),A_rows,
+  F77NAME(ZSYSVX)("N","U",A_rows,B_cols,A_bis.data(),A_rows,AF.data(),A_rows,
                   P.data(),B_bis.data(),B_rows,X.data(),B_rows,cond,
                   ferr.data(),berr.data(),work.data(),2*A_rows,work2.data(),
                   info);

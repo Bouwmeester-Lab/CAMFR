@@ -1,0 +1,13 @@
+Metadata-Version: 2.2
+Name: camfr
+Version: 3.0.0
+Summary: CAvity Modelling FRamework
+Home-page: http://camfr.sourceforge.net
+Author: Peter Bienstman
+Author-email: Peter.Bienstman@UGent.be
+License-File: LICENSE
+License-File: AUTHORS
+Dynamic: author
+Dynamic: author-email
+Dynamic: home-page
+Dynamic: summary

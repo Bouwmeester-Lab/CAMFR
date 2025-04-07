@@ -42,7 +42,7 @@ and double precision versions at the same time.
 
 #endif
 
-#ifdef DP
+#ifndef SP
 
 #define REAL double
 #define ZERO 0.0e0

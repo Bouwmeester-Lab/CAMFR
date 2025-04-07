@@ -25,7 +25,7 @@ using std::vector;
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(cpoly)(Real*,Real*,int&,Real*,Real*,int*);
+extern "C" void F77NAME(CPOLY)(Real*,Real*,int&,Real*,Real*,int*);
 
 vector<Complex> polyroot(const vector<Complex>& coef)
 {
@@ -49,7 +49,7 @@ vector<Complex> polyroot(const vector<Complex>& coef)
 
   // Call Fortan routine.
 
-  F77NAME(cpoly)(coef_r,coef_i,N,root_r,root_i,&error);
+  F77NAME(CPOLY)(coef_r,coef_i,N,root_r,root_i,&error);
 
   if (error)
     py_error("Warning: polyroot solver did not converge.");

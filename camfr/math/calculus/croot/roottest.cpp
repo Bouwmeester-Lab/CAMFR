@@ -12,7 +12,10 @@
 
 #include <iostream>
 #include "allroots.h"
-
+#include "vector"
+using std::cout;
+using std::endl;
+using std::vector;
 /////////////////////////////////////////////////////////////////////////////
 //
 // Test function F

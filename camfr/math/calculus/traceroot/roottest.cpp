@@ -16,6 +16,10 @@
 #include "../../bessel/bessel.h"
 #include "../../../util/cvector.h"
 
+#include "vector"
+using std::cout;
+using std::endl;
+using std::vector;
 /////////////////////////////////////////////////////////////////////////////
 //
 // Simple function object for roottester : Bessel function + offset

@@ -11,7 +11,7 @@
 /////////////////////////////////////////////////////////////////////////////
 
 #include <boost/python.hpp>
-#include "numpy/core/include/numpy/arrayobject.h"
+#include "arrayobject.h"
 
 #include "camfr_wrap.h"
 

@@ -16,9 +16,9 @@
 /*                                                                        */
 /**************************************************************************/
 
-#define SP
-#include "machar.c"
-#undef SP
-
-#define DP
-#include "machar.c"
+//#define SP
+//#include "machar.c"
+//#undef SP
+//
+//#define DP
+//#include "machar.c"

@@ -14,6 +14,10 @@
 #include <iomanip>
 #include "../../bessel/bessel.h"
 #include "root.h"
+#include "vector"
+using std::cout;
+using std::endl;
+using std::vector;
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -47,7 +51,7 @@ int main()
   vector<Real> zeros = brent_N_roots(f, 0, 10, pi/2, 1e-15, 1);
 
   for (int i=0; i<zeros.size(); i++)
-    cout << i << " : " << setprecision(15) << zeros[i] << endl;
+    cout << i << " : " << std::setprecision(15) << zeros[i] << endl;
   
   cout << "Iterations : " << f.times_called() << endl;
   
