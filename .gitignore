@@ -2,3 +2,6 @@
 *.pyc
 *.os
 
+/camfr/.vs
+/camfr/CAMFR/x64/Debug/CAMFR.tlog
+/camfr/CAMFR/x64/Debug/microsoft/STL

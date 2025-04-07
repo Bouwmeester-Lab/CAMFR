@@ -27,11 +27,11 @@ const Real eps = 1e-15;
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" double F77NAME(dbesj0)(double&);
+extern "C" double F77NAME(DBESJ0)(double&);
 
 Real J0(Real x)
 {
-  return F77NAME(dbesj0)(x);
+  return F77NAME(DBESJ0)(x);
 }
 
 
@@ -44,11 +44,11 @@ Real J0(Real x)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" double F77NAME(dbesj1)(double&);
+extern "C" double F77NAME(DBESJ1)(double&);
 
 Real J1(Real x)
 {
-  return F77NAME(dbesj1)(x);
+  return F77NAME(DBESJ1)(x);
 }
 
 
@@ -61,11 +61,11 @@ Real J1(Real x)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" double F77NAME(dbesy0)(double&);
+extern "C" double F77NAME(DBESY0)(double&);
 
 Real Y0(Real x)
 {
-  return F77NAME(dbesy0)(x);
+  return F77NAME(DBESY0)(x);
 }
 
 
@@ -78,11 +78,11 @@ Real Y0(Real x)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" double F77NAME(dbesy1)(double&);
+extern "C" double F77NAME(DBESY1)(double&);
 
 Real Y1(Real x)
 {
-  return F77NAME(dbesy1)(x);
+  return F77NAME(DBESY1)(x);
 }
 
 
@@ -93,7 +93,7 @@ Real Y1(Real x)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(dbesj)(double&, double&, int&, double*, int&);
+extern "C" void F77NAME(DBESJ)(double&, double&, int&, double*, int&);
 
 Real J(Real n, Real x, bool scaled)
 {
@@ -107,7 +107,7 @@ Real J(Real n, Real x, bool scaled)
   Real result[1];
   int  underflows=0;
   
-  F77NAME(dbesj)(x,n,orders,result,underflows);
+  F77NAME(DBESJ)(x,n,orders,result,underflows);
 
   if (underflows)
   {
@@ -128,7 +128,7 @@ Real J(Real n, Real x, bool scaled)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(dbesy)(double&, double&, int&, double*);
+extern "C" void F77NAME(DBESY)(double&, double&, int&, double*);
 
 Real Y(Real n, Real x, bool scaled)
 {
@@ -141,7 +141,7 @@ Real Y(Real n, Real x, bool scaled)
   int  orders=1;       // orders=1 : only compute this order
   Real result[1];
   
-  F77NAME(dbesy)(x,n,orders,result);
+  F77NAME(DBESY)(x,n,orders,result);
 
   return result[0]; 
 }
@@ -233,7 +233,7 @@ void checkerror(int underflows, int ierr, const char* function,
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(zbesj)(double&, double&, double&, int&, int&,
+extern "C" void F77NAME(ZBESJ)(double&, double&, double&, int&, int&,
                                double*, double*, int&, int&);
 
 const Complex J(Real n, const Complex& z, bool scaled)
@@ -250,7 +250,7 @@ const Complex J(Real n, const Complex& z, bool scaled)
   int  underflows=0;
   int  ierr=0;
 
-  F77NAME(zbesj)(zr,zi,n,code,orders,yr,yi,underflows,ierr);
+  F77NAME(ZBESJ)(zr,zi,n,code,orders,yr,yi,underflows,ierr);
 
   checkerror(underflows,ierr,"J",n,z);
   
@@ -265,7 +265,7 @@ const Complex J(Real n, const Complex& z, bool scaled)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(zbesy)(double&, double&, double&, int&, int&,
+extern "C" void F77NAME(ZBESY)(double&, double&, double&, int&, int&,
                                double*, double*, int&, double*, double*, int&);
 
 const Complex Y(Real n, const Complex& z, bool scaled)
@@ -283,7 +283,7 @@ const Complex Y(Real n, const Complex& z, bool scaled)
   int  underflows=0;
   int  ierr=0;
 
-  F77NAME(zbesy)(zr,zi,n,code,orders,yr,yi,underflows,workr,worki,ierr);
+  F77NAME(ZBESY)(zr,zi,n,code,orders,yr,yi,underflows,workr,worki,ierr);
 
   checkerror(underflows,ierr,"Y",n,z);
     
@@ -298,7 +298,7 @@ const Complex Y(Real n, const Complex& z, bool scaled)
 //
 /////////////////////////////////////////////////////////////////////////////
 
-extern "C" void F77NAME(zbesh)(double&, double&, double&, int&, int&, int&,
+extern "C" void F77NAME(ZBESH)(double&, double&, double&, int&, int&, int&,
                                double*, double*, int&, int&);
 
 const Complex H1(Real n, const Complex& z, bool scaled)
@@ -316,7 +316,7 @@ const Complex H1(Real n, const Complex& z, bool scaled)
   int  underflows=0;
   int  ierr=0;
 
-  F77NAME(zbesh)(zr,zi,n,code,type,orders,yr,yi,underflows,ierr);
+  F77NAME(ZBESH)(zr,zi,n,code,type,orders,yr,yi,underflows,ierr);
 
   checkerror(underflows,ierr,"H1",n,z);
   
@@ -346,7 +346,7 @@ const Complex H2(Real n, const Complex& z, bool scaled)
   int  underflows=0;
   int  ierr=0;
 
-  F77NAME(zbesh)(zr,zi,n,code,type,orders,yr,yi,underflows,ierr);
+  F77NAME(ZBESH)(zr,zi,n,code,type,orders,yr,yi,underflows,ierr);
 
   checkerror(underflows,ierr,"H2",n,z);
     
@@ -412,7 +412,7 @@ Real dJ(Real n, Real x, Real* Jn, Real* Jn_1, bool scaled)
   int    underflows=0;
   Real   result[2];
 
-  F77NAME(dbesj)(x,startorder,orders,result,underflows);
+  F77NAME(DBESJ)(x,startorder,orders,result,underflows);
 
   if (underflows)
   {
@@ -478,7 +478,7 @@ Real dY(Real n, Real x, Real* Yn, Real* Yn_1, bool scaled)
   int    orders=2;       // .. and n
   Real   result[2];
 
-  F77NAME(dbesy)(x,startorder,orders,result);
+  F77NAME(DBESY)(x,startorder,orders,result);
 
   Real yn_1=result[0];
   Real   yn=result[1];
@@ -603,7 +603,7 @@ const Complex dJ(Real n, const Complex& z, Complex* Jn, Complex* Jn_1,
   int    underflows=0;
   int    ierr=0;
 
-  F77NAME(zbesj)(zr,zi,startorder,code,orders,yr,yi,underflows,ierr);
+  F77NAME(ZBESJ)(zr,zi,startorder,code,orders,yr,yi,underflows,ierr);
 
   checkerror(underflows,ierr,"J",n,z);
   
@@ -675,7 +675,7 @@ const Complex dY(Real n, const Complex& z, Complex* Yn, Complex* Yn_1,
   int    underflows=0;
   int    ierr=0;
 
-  F77NAME(zbesy)(zr,zi,startorder,code,orders,yr,yi,
+  F77NAME(ZBESY)(zr,zi,startorder,code,orders,yr,yi,
                  underflows,workr,worki,ierr);
 
   checkerror(underflows,ierr,"Y",n,z);
@@ -730,7 +730,7 @@ const Complex dH1(Real n, const Complex& z, Complex* Hn, Complex* Hn_1,
   int    underflows=0;
   int    ierr=0;
 
-  F77NAME(zbesh)(zr,zi,startorder,code,type,orders,yr,yi,underflows,ierr);
+  F77NAME(ZBESH)(zr,zi,startorder,code,type,orders,yr,yi,underflows,ierr);
   
   checkerror(underflows,ierr,"H1",n,z);
   
@@ -784,7 +784,7 @@ const Complex dH2(Real n, const Complex& z, Complex* Hn, Complex* Hn_1,
   int    underflows=0;
   int    ierr=0;
 
-  F77NAME(zbesh)(zr,zi,startorder,code,type,orders,yr,yi,underflows,ierr);
+  F77NAME(ZBESH)(zr,zi,startorder,code,type,orders,yr,yi,underflows,ierr);
   
   checkerror(underflows,ierr,"H2",n,z);
   
