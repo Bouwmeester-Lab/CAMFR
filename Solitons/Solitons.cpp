@@ -3,10 +3,51 @@
 
 #include <iostream>
 #include "material.h"
+#include "primitives/slab/isoslab/slab.h"
+#include "primitives/section/section.h"
+#include "meshgrid.hpp"
 
 int main()
 {
-    Material cladding(1.45);
+    //wavelength
+    global.lambda = 1.064;
+    global.N = 20;
+    global.polarisation = TE;
+    
+    Material sio(1.45);
+    Material helium(1.02451);
+    Material air(1.0);
+    
+    //UniformSlab core(1.5e-6, sio);
+    //UniformSlab top(15e-9, helium);
+    //UniformSlab air(1e-6, air);
+
+    Slab main_core(air(1) + helium(15e-9*1e6) + sio(1.5) + air(1));
+
+    main_core.find_modes();
+
+
+
+    auto x = meshgen::linspace(0.0, 1.0, 100);
+    auto y = meshgen::linspace(0.0, 1.0, 100);
+    auto z = meshgen::linspace(0.0, 1.0, 100);
+
+    meshgen::mesh_grid<double, 0, 2> X;
+    meshgen::mesh_grid<double, 1, 2> Y;
+    meshgen::mesh_grid<double, 2, 2> Z;
+
+    std::tie(X, Y) = meshgen::meshgrid(x, y);
+
+
+    for (size_t i = 0; i < X.size1(); ++i) {
+        for (size_t j = 0; j < X.size2(); ++j) {
+           Z(i, j)   main_core.get_mode(1)->field(Coord(X(i, j), Y(i, j))).E1;
+        }
+    }
+
+
+    std::cout << "Fundamental mode has kz = " << main_core.get_mode(1)->get_kz() << std::endl;
+    std::cout << "Fundamental mode has neff = " << main_core.get_mode(1)->n_eff() << std::endl;
     std::cout << "Hello World!\n";
 }
 
